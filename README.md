@@ -1,6 +1,6 @@
 # AngularJwt
 
-This repository contains a simple Angular CLI project template to be used with projects that need a secure login to a backend. It is a barebones project with the minimum to use JWT authorization to a backend server which provides JWT tokens (e.g. [the node-jwt-example project](https://github.com/matthew-trump/node-jwt-example0 ) 
+This repository contains a simple Angular CLI project template to be used with projects that need a secure login to a backend. It is a barebones project with the minimum to use JWT authorization to a backend server which provides JWT tokens (e.g. [the node-jwt-example project](https://github.com/matthew-trump/node-jwt-example))
 
 It is enabled to do the following things:
 
