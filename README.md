@@ -1,27 +1,18 @@
 # AngularJwt
 
+This repository contains a simple Angular CLI project template to be used with projects that need a secure login to a backend. It is a barebones project with the minimum to use JWT authorization to a backend server which provides JWT tokens (e.g. (the node-jwt-example)[https://github.com/matthew-trump/node-jwt-example] ) 
+
+It is enabled to do the following things:
+
+* allow username/password logins to the backend via a login form.
+* receive and store the JWT token returned from a successful login. 
+* recognize http requests to the api and to add the JWT token to the Authorization header.
+* provide the login state throughout the app via a service.
+* establish a protected route within the app that is accessible only when logged in, and redirect invalid access to the login form (this feature requires Routing to be enabled).
+
+The configurations for various features are found in the environment file.
+
+### Generated comments
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.9.
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
