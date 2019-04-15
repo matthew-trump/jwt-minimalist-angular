@@ -17,7 +17,7 @@ export class TestApiComponent implements OnInit {
   ngOnInit() {
   }
   ping() {
-    this.backendService.ping()
+    this.backendService.unprotectedPing()
       .pipe(
         catchError(err => {
           return of(null);
@@ -31,7 +31,7 @@ export class TestApiComponent implements OnInit {
 
   }
   protected() {
-    this.backendService.protected()
+    this.backendService.protectedPing()
       .pipe(
         catchError(err => {
           return of(null);
