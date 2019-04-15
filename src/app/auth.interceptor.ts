@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 
 import { environment } from '../environments/environment';
 
-const API_PATH: string = environment.apiPath;
+const PROTECTED_PATH: string = environment.protectedPath;
 
 @Injectable()
 export class AuthInterceptor implements HttpInterceptor {
@@ -15,7 +15,7 @@ export class AuthInterceptor implements HttpInterceptor {
         const l = document.createElement("a");
         l.href = req.url;
 
-        if (l.pathname.startsWith(API_PATH)) {
+        if (l.pathname.startsWith(PROTECTED_PATH)) {
             const idToken = localStorage.getItem("id_token");
             if (idToken) {
                 const cloned = req.clone({
