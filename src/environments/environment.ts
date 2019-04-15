@@ -4,12 +4,16 @@
 
 export const environment = {
   production: false,
+
   backendUrl: "http://localhost:8080",
-  apiPath: "/api/",
-  loginPath: "/api/login",
+  loginPath: "/login",
+  unprotectedPath: "/unprotected/",
+  protectedPath: "/protected/",
+
   loginRoute: "login",
-  protectedRoute: "protected",
-  apiTestRoute: "apitest"
+  apiTestRoute: "api-test",
+  protectedRoute: "protected"
+
 };
 
 /*
