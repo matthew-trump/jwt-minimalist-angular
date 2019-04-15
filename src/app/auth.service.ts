@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { BackendService } from './backend.service';
 import { shareReplay, tap } from 'rxjs/operators';
 import { environment } from '../environments/environment';
 
@@ -13,10 +13,10 @@ const LOGIN_PATH: string = environment.loginPath;
 })
 export class AuthService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private backendService: BackendService) { }
 
-  login(username: String, password: String) {
-    return this.http.post<any>(BACKEND_URL + LOGIN_PATH, { username, password })
+  login(username: string, password: string) {
+    return this.backendService.login(username, password)
       .pipe(
         tap(res => this.setSession(res)),
         tap(_ => console.log('Successfully logged in')),
